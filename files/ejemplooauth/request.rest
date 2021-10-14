@@ -1,0 +1,66 @@
+
+POST http://localhost:3000/administrador/aprobar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiODJlYzg1Njc3NjE5NzRhYWNiZDU0NDRlN2UzYjEyMzQyMTY5MmVhZjYyNTY2NDI3IiwidGlwbyI6MCwiaWF0IjoxNjIyODM0MDA1fQ.2vP3nG7QMYVAhjC9v34KGHIh_roGrSv_zYNerZhzbqs
+Content-Type: application/json
+
+{
+    "editorial": "b9f63da02c0ba6a6cb16077e6a6563bcdc002445a8f1003d"
+}
+
+###
+
+DELETE http://localhost:3001/administrador/eliminar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiODJlYzg1Njc3NjE5NzRhYWNiZDU0NDRlN2UzYjEyMzQyMTY5MmVhZjYyNTY2NDI3IiwidGlwbyI6MCwiaWF0IjoxNjIyODM0MDA1fQ.2vP3nG7QMYVAhjC9v34KGHIh_roGrSv_zYNerZhzbqs
+Content-Type: application/json
+
+{
+    "usuario": "4ef6162c0e214b379f0248be5bd9a520752bc2b91d022fd6"
+}
+
+###
+
+GET http://localhost:3001/administrador/editoriales-pendientes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiODJlYzg1Njc3NjE5NzRhYWNiZDU0NDRlN2UzYjEyMzQyMTY5MmVhZjYyNTY2NDI3IiwidGlwbyI6MCwiaWF0IjoxNjIyODM0MDA1fQ.2vP3nG7QMYVAhjC9v34KGHIh_roGrSv_zYNerZhzbqs
+Content-Type: application/json
+
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "correo": "admin@admin.com",
+    "pwd": "alskfdjalsdkf123"
+}
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "correo": "admin@admin.com",
+    "pwd": "admin"
+}
+###
+PUT http://localhost:3001/registro
+Content-Type: application/json
+
+{
+    "nombre": "Cesar Josue",
+    "apellido": "Reyes Diaz",
+    "correo": "josue@gmail.com",
+    "pwd": "alskfdjalsdkf123",
+    "telefono": "12345678",
+    "tipo": 2
+}
+
+###
+PUT http://localhost:3001/registro
+Content-Type: application/json
+
+{
+    "nombre": "Monterrico",
+    "correo": "monterrico@gmail.com",
+    "pwd": "1234",
+    "direccion": "Mixco, Guatemala",
+    "tipo": 1
+}

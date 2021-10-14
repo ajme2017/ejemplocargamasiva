@@ -1,0 +1,48 @@
+"/home/alan/Escritorio/prueba.dk"
+
+--creo el disco
+ mkdisk -path="/home/alan/Escritorio/ejemplo.disk" -size=50
+ 
+
+ ---creo particion
+ fdisk -sizE=2 -UniT=M -path="/home/alan/Escritorio/ejemplo.disk" -type=P -fit=FF -name="PRI1"
+
+
+
+--monto
+moUnt -path="/home/alan/Escritorio/ejemplo.disk" -name="PRI1"
+
+--formateo
+mkfs -id=vda1 -type=full
+
+#nos logueamos en la particion PRI1 con nuestro usuario root, cambiar pwd a su no.carne
+loGin -usr=root -pwd=123 -id=vda1
+
+-----CARPETAS
+mkdir  -path="/home/carpeta1/" -P
+mkdir  -path="/home/carpeta2/" -P
+mkdir  -path="/home/carpeta3/" -P
+mkdir  -path="/home/carpeta4/" -P
+mkdir  -path="/home/carpeta5/" -P
+mkdir  -path="/home/carpeta6/" -P
+mkdir  -path="/home/carpeta7/" -P
+mkdir  -path="/home/carpeta8/" -P
+mkdir  -path="/user/" -P
+mkdir  -path="/bin/" -P
+mkdir -path="/home/carpeta4/carpeta4" -P
+
+---ARCHIVOS 
+mkfile -path="/home/carpeta4/carpeta4/hola.txt" -P -size=370
+mkfile -path="/user/file1.txt" -P -size=185
+mkfile -path="/user/file2.txt" -P  -size=60
+mkfile -path="/user/file3.txt" -P  -size=60
+mkfile -path="/user/file4.txt" -P  -size=60
+mkfile -path="/user/file5.txt" -P  -size=60
+mkfile -path="/user/file6.txt" -P   -size=60
+mkfile -path="/user/file7.txt" -P   -size=60
+mkfile -path="/bin/archivo.txt" -P  -size=120
+
+--grafico
+rep -id=vda1 -Path="/home/alan/Escritorio/reporte1_tree_complete.png" -NamE=tree
+--reporte inodos
+rep -id=vda1 -Path="/home/alan/Escritorio/reporteinodos.png" -NamE=bm_inode

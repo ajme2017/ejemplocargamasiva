@@ -1,0 +1,19 @@
+POST http://localhost:3000/insertar HTTP/1.1
+
+###
+POST http://localhost:3000/insertar2 HTTP/1.1
+
+###
+
+GET http://localhost:3000/obtener HTTP/1.1
+
+###
+
+POST  http://localhost:3000/insertarbody HTTP/1.1
+content-type: application/json
+
+{
+    "id":1,
+    "nombre": "ESTOYENARCHIVOS",
+    "localidad": "PETEN"
+}
